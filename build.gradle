@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+mainClassName = 'net.d53dev.wanana.server.WananaServer'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.undertow:undertow-core:1.0.0+'
+    compile 'io.undertow:undertow-servlet:1.0.0+'
+    compile 'org.cache2k:cache2k-ee:0.21.1'
+    compile 'org.cache2k:cache2k-api:0.21.1'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.2'
+}
