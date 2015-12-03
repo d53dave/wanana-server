@@ -1,2 +1,2 @@
 # wanana-server
-Backend for the wanana weather app
+Backend for the wanana weather app.
