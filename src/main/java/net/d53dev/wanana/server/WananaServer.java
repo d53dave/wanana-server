@@ -6,17 +6,18 @@ import io.undertow.server.HttpServerExchange;
 import io.undertow.util.Headers;
 
 /**
- * Created by davidsere on 18/09/15.
+ * Created by on 18/09/15.
  */
 public class WananaServer {
-    public static void main(final String[] args) {
+    @SuppressWarnings("deprecation")
+	public static void main(final String[] args) {
         Undertow server = Undertow.builder()
                 .addListener(8080, "localhost")
                 .setHandler(new HttpHandler() {
                     @Override
                     public void handleRequest(final HttpServerExchange exchange) throws Exception {
                         exchange.getResponseHeaders().put(Headers.CONTENT_TYPE, "application/json");
-                        exchange.getResponseSender().send("{\"message:\": \"LOL\"}");
+                        exchange.getResponseSender().send("{\"message:\": \"Hallo\"}");
                     }
                 }).build();
         server.start();
